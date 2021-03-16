@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import Component from './Component';
 
 const Card = () => {
     const [item, setItem] = useState([]);
@@ -18,23 +19,28 @@ const Card = () => {
         })
     }, [])
 
-    // const getUser = () => {
-    //     console.log(item)
-    //     const tempItems = item.map(user => ( {
-    //         'picture': user.picture,
-    //         'title': user.name.title,
-    //         'first': user.name.first,
-    //         'last': user.name.last,           
-    //     }))
-    //     setUsers([...users, tempItems])
-    //     console.log(users)
-    // }
+    // const tempItems = users.map((comp, i) => {
+    //     return <div key={i} picture={comp[i].picture} title={comp[i].title} first={comp[i].first} last={comp[i].last}></div>
+    // })
+
+    const tempItems = users.map((comp) => {
+           return (
+           <div style={{width: '10rem', height: '10rem', borderStyle: 'solid', justifyContent: 'center'}}>
+               <p>{comp.title}</p>
+               <h2>{comp.first}</h2>
+               <h2>{comp.last}</h2>
+           </div>
+           )
+    })
+    
+    console.log('1', tempItems);
+
     console.log(users)
     console.log(item)
 
     return (
         <div>
-            
+            {tempItems}
         </div>
     )
 }
