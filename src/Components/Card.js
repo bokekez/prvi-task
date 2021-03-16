@@ -23,17 +23,16 @@ const Card = () => {
     //     return <div key={i} picture={comp[i].picture} title={comp[i].title} first={comp[i].first} last={comp[i].last}></div>
     // })
 
-    const tempItems = users.map((comp) => {
-           return (
-           <div style={{width: '10rem', height: '10rem', borderStyle: 'solid', justifyContent: 'center'}}>
-               <p>{comp.title}</p>
-               <h2>{comp.first}</h2>
-               <h2>{comp.last}</h2>
-           </div>
-           )
+    const tempItems = users.map(comp => {
+        return (
+        <div style={{width: '15rem', height: '15rem', borderStyle: 'solid', justifyContent: 'center'}}>
+            <img src={comp.picture.medium}/>
+            <p>{comp.title}</p>
+            <h2>{comp.first}</h2>
+            <h2>{comp.last}</h2>
+        </div>
+        )
     })
-    
-    console.log('1', tempItems);
 
     console.log(users)
     console.log(item)
