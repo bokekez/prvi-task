@@ -24,17 +24,17 @@ const Card = () => {
         <div style={{
             width: '15rem', 
             height: '15rem', 
-            borderStyle: 'solid', 
-            borderColor: 'white', 
+            background: '#f0f0f5',
             alignContent: 'center', 
             textAlign: 'center', 
             marginTop: '1rem',
-            marginLeft: '1rem'
+            marginLeft: '1rem',
+            borderRadius: '20px'
             }}>
-            <img style={{marginTop: '2px'}}src={comp.picture.medium}/>
-            <p>{comp.title}</p>
-            <h2>{comp.first}</h2>
-            <h2>{comp.last}</h2>
+            <img style={{marginTop: '0.3rem', borderRadius: '40px'}}src={comp.picture.large}/>
+            <h3 style={{height: '0.5rem', fontSize: '0.7rem'}}>{comp.title}</h3>
+            <h2 style={{height: '0.5rem', fontSize: '1.2rem'}}>{comp.first}</h2>
+            <h2 style={{height: '0.5rem', fontSize: '1.2rem'}}>{comp.last}</h2>
         </div>
         )
     })
