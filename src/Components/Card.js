@@ -21,7 +21,8 @@ const Card = () => {
 
     const tempItems = users.map(comp => {
         return (
-        <div style={{
+        <div className='grow shadow-5'
+            style={{
             width: '15rem', 
             height: '15rem', 
             background: '#f0f0f5',
@@ -29,7 +30,8 @@ const Card = () => {
             textAlign: 'center', 
             marginTop: '1rem',
             marginLeft: '1rem',
-            borderRadius: '20px'
+            borderRadius: '20px',
+            transition: '0.5s'
             }}>
             <img style={{marginTop: '0.3rem', borderRadius: '40px'}}src={comp.picture.large}/>
             <h3 style={{height: '0.5rem', fontSize: '0.7rem'}}>{comp.title}</h3>
