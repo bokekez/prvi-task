@@ -6,7 +6,7 @@ const Card = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch(`https://randomuser.me/api/?offset=-1:00,0:00,+1:00&results=15&age>18`)
+        fetch(`https://randomuser.me/api/?results=15`)
         .then(response => response.json())
         .then(json => {
             const tempItems = json.results.map(user => ({
@@ -28,7 +28,8 @@ const Card = () => {
             borderColor: 'white', 
             alignContent: 'center', 
             textAlign: 'center', 
-            marginTop: '1rem'
+            marginTop: '1rem',
+            marginLeft: '1rem'
             }}>
             <img style={{marginTop: '2px'}}src={comp.picture.medium}/>
             <p>{comp.title}</p>
@@ -42,7 +43,7 @@ const Card = () => {
     console.log(item)
 
     return (
-        <div>
+        <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
             {tempItems}
         </div>
     )
