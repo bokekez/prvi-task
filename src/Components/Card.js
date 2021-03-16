@@ -34,7 +34,7 @@ const Card = () => {
 
     return (
         <div>
-            {/* <button onClick={getUser}></button> */}
+            
         </div>
     )
 }
