@@ -19,14 +19,18 @@ const Card = () => {
         })
     }, [])
 
-    // const tempItems = users.map((comp, i) => {
-    //     return <div key={i} picture={comp[i].picture} title={comp[i].title} first={comp[i].first} last={comp[i].last}></div>
-    // })
-
     const tempItems = users.map(comp => {
         return (
-        <div style={{width: '15rem', height: '15rem', borderStyle: 'solid', justifyContent: 'center'}}>
-            <img src={comp.picture.medium}/>
+        <div style={{
+            width: '15rem', 
+            height: '15rem', 
+            borderStyle: 'solid', 
+            borderColor: 'white', 
+            alignContent: 'center', 
+            textAlign: 'center', 
+            marginTop: '1rem'
+            }}>
+            <img style={{marginTop: '2px'}}src={comp.picture.medium}/>
             <p>{comp.title}</p>
             <h2>{comp.first}</h2>
             <h2>{comp.last}</h2>

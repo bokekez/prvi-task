@@ -4,8 +4,8 @@ import Card from './Components/Card';
 
 function App() {
   return (
-    <div style={{display: 'flex', flexDirection: 'column'}}>
-      <h1 style={{borderStyle: 'double'}}>Dept logo</h1>
+    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
+      <h1 style={{borderStyle: 'double', justifyItems: 'center'}}>Dept logo</h1>
       <Card/>
     </div>
   );
