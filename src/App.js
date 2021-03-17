@@ -9,11 +9,12 @@ import { ItemContext } from './Components/Context';
 function App() {
   const [load, setLoad] = useState('false');
   const [items, setItems] = useState([]);
+  const [profileId, setProfileId] = useState(0);
 
   return (
     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
       <Logo/>
-      <ItemContext.Provider value={{items, setItems}}>
+      <ItemContext.Provider value={{items, setItems, profileId, setProfileId}}>
       <Router>
         <Route exact={true} path="/prvi-task" render={() =>(
           <Card load={load} setLoad={setLoad}/>

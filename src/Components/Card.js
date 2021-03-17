@@ -6,13 +6,13 @@ import { ItemContext } from './Context'
 const Card = ({load, setLoad}) => {
     
     const [users, setUsers] = useState([]);
-    const {items, setItems} = useContext(ItemContext);
+    const {items, setItems, profileId, setProfileId} = useContext(ItemContext);
     
     console.log(load)
 
     useEffect(() => {
         if(load !== 'true'){
-        fetch(`https://randomuser.me/api/?results=200`)
+        fetch(`https://randomuser.me/api/?results=15`)
         .then(response => response.json())
         .then(json => {
             const tempItems = json.results.map(user => ({
@@ -20,7 +20,7 @@ const Card = ({load, setLoad}) => {
                 'title': user.name.title,
                 'first': user.name.first,
                 'last': user.name.last, 
-                'birtd': user.dob.date,
+                'birth': user.dob.date,
                 'city': user.location.city,
                 'timezone': user.location.timezone.offset,    
                 'email': user.email,
@@ -34,8 +34,10 @@ const Card = ({load, setLoad}) => {
             //     const filteredItems = tempItems.filter(member => (member.timezone === '-1:00' || member.timezone === '0:00' || member.timezone === '+1:00')({
                 
             // }))
-            // })    
-            setUsers([...users, ...tempItems]);
+            // }) 
+
+            // setUsers([...users, ...tempItems]);
+            setItems([...items,...tempItems]);
 
             //setUsers([...users, ...filteredItems])
             setLoad('true')
@@ -44,15 +46,12 @@ const Card = ({load, setLoad}) => {
         }
     }, [load])
 
-    // if ( load === true){
-    //     
-    //     console.log('itemi', items);
-    // }
     
-    const componentRender = users.map(comp => {
+    const componentRender = items.map(comp => {
         return (
         <Link to={`/profile/${comp.id}`} className='linktext-decoration: none' style={{textDecoration: 'none', outline: '0' }}>
         <div className='grow dib'
+            onClick={() => idPass(comp.id)}
             style={{
             textDecoration: 'none',
             width: '14rem', 
@@ -75,10 +74,13 @@ const Card = ({load, setLoad}) => {
         )
     })
 
-    
+    const idPass = (id) =>{
+        setProfileId(id);
+    }    
   
     const refresh = () =>{
-        setLoad('false')
+        setItems([]);
+        setLoad('false');
     }
 
     return (
