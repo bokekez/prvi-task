@@ -29,7 +29,7 @@ return (
                     <img style={{height: '1rem', fontSize: '1rem'}} src={Last}></img> {userProfile[0].last}
                 </h2>
                 <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
-                    <img style={{height: '1rem', fontSize: '1rem'}} src={Cake}></img> {userProfile[0].age}
+                    <img style={{height: '1rem', fontSize: '1rem'}} src={Cake}></img> {userProfile[0].date}
                 </h2>
                 <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
                     <img style={{height: '1rem', fontSize: '1rem'}} src={City}></img> {userProfile[0].city}

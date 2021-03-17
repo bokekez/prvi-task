@@ -22,6 +22,7 @@ const Card = ({load, setLoad}) => {
                 'first': user.name.first,
                 'last': user.name.last, 
                 'age': user.dob.age,
+                'birthday': user.dob.date,
                 'city': user.location.city,
                 'timezone': user.location.timezone.offset,    
                 'email': user.email,
@@ -31,7 +32,9 @@ const Card = ({load, setLoad}) => {
             tempItems.forEach((temp, i) => {
                 temp.id = i + 1;
               })
-            
+            tempItems.forEach((temp, i) => {
+                temp.date = (new Date(temp.birthday).toLocaleDateString())
+            })
 
             const filteredItems = tempItems.filter((member) => 
                     (member.timezone == '-1:00' || member.timezone == '0:00' || member.timezone == '+1:00' && member.age > '18') 
@@ -46,12 +49,13 @@ const Card = ({load, setLoad}) => {
             
             setItems([...items,...filteredItems]);
             setLoad('true')
-            console.log('1', users)
+            
         })
         }
     }, [load])
 
-    
+    console.log('1', items)
+
     const componentRender = items.map(comp => {
         return (
         <Link to={`/profile/${comp.id}`} className='linktext-decoration: none' style={{color:'black' ,textDecoration: 'none', outline: '0' }}>
