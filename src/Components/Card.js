@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import Component from './Component';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { ItemContext } from './Context'
+import refreshArrow from './refresh-arrow.png';
 
 const Card = ({load, setLoad}) => {
     
@@ -60,13 +61,13 @@ const Card = ({load, setLoad}) => {
             onClick={() => idPass(comp.id)}
             style={{
             textDecoration: 'none',
-            width: '20rem', 
+            width: '22rem', 
             height: '16rem', 
             background: '#E0E0E0',
             alignContent: 'center', 
             textAlign: 'center', 
             marginTop: '1rem',
-            marginLeft: '3rem',
+            marginLeft: '1rem',
             marginRight: '0.5rem',
             borderRadius: '20px',
             transition: '0.5s'
@@ -90,7 +91,7 @@ const Card = ({load, setLoad}) => {
     }
 
     return (
-        <div>
+        <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
             { load === 'true' ?
             <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
                 {componentRender}
@@ -98,7 +99,10 @@ const Card = ({load, setLoad}) => {
             :
             <h1>Loading</h1>
             }
-            <button onClick={refresh}>Refresh</button>
+            <button onClick={refresh} className='grow' 
+            style={{ marginTop: '1rem', outline: 'none', backgroundColor: 'transparent', border: 'none', }}>
+                <img src={refreshArrow} style={{height: '2rem', width: '2rem'}}/>
+            </button>
         </div>
     )
 }
