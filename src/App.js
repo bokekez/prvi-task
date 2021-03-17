@@ -25,6 +25,7 @@ function App() {
         <Route exact={true} path="/" render={() =>(
           <Card load={load} setLoad={setLoad}/>
         )}/>
+        <Route exact={true} path="/home" to="/" />
         <Route exact={true} path="/Profile/:id" render={() => (
           <Profile/>
         )}/>
