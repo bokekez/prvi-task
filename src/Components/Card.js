@@ -28,24 +28,26 @@ const Card = ({load, setLoad, item, setItem}) => {
             tempItems.forEach((temp, i) => {
                 temp.id = i + 1;
               })
-            .then(tempItems =>{
-                const filteredItems = tempItems.filter(member => (member.timezone === '-1:00' || member.timezone === '0:00' || member.timezone === '+1:00')({
+            // .then(tempItems =>{
+            //     const filteredItems = tempItems.filter(member => (member.timezone === '-1:00' || member.timezone === '0:00' || member.timezone === '+1:00')({
                 
-            }))
-            })    
-            // setUsers([...users, ...tempItems]);
-            setUsers([...users, ...filteredItems])
+            // }))
+            // })    
+            setUsers([...users, ...tempItems]);
+
+            //setUsers([...users, ...filteredItems])
             setLoad('true')
             console.log('1', users)
-        // }
-        // }
         })
         }
     }, [load])
 
-    console.log('1', users)
 
-    const componentRender = users.map(comp => {
+
+    const componentRender = () => {
+        setItem([...item, ...users]);
+        console.log('item', item)
+        item.map(comp => {
         return (
         <Link to={`/profile/${comp.id}`}  className='linktext-decoration: none' style={{textDecoration: 'none', outline: '0' }}>
         <div className='grow dib'
@@ -70,7 +72,7 @@ const Card = ({load, setLoad, item, setItem}) => {
         </Link>
         )
     })
-  
+    }
     const refresh = () =>{
         setLoad('false')
     }
@@ -80,11 +82,11 @@ const Card = ({load, setLoad, item, setItem}) => {
             { load === 'true' ?
             <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
                 {componentRender}
-                <button onClick={refresh}>Refresh</button>
             </div>
             :
-            <div>14</div>
+            <h1>Loading</h1>
             }
+            <button onClick={refresh}>Refresh</button>
         </div>
     )
 }
