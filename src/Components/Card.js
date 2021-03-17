@@ -1,12 +1,12 @@
 import React, {useState, useEffect, useContext} from 'react';
 import Component from './Component';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Item } from './Context'
+import { ItemContext } from './Context'
 
-const Card = ({load, setLoad, item, setItem}) => {
+const Card = ({load, setLoad}) => {
     
     const [users, setUsers] = useState([]);
-    const {items, setItems} = useContext(Item);
+    const {items, setItems} = useContext(ItemContext);
     
     console.log(load)
 
@@ -44,11 +44,14 @@ const Card = ({load, setLoad, item, setItem}) => {
         }
     }, [load])
 
-    setItems(users)
+    // if ( load === true){
+    //     
+    //     console.log('itemi', items);
+    // }
     
-    const componentRender = items.map(comp => {
+    const componentRender = users.map(comp => {
         return (
-        <Link to={`/profile/${comp.id}`}  className='linktext-decoration: none' style={{textDecoration: 'none', outline: '0' }}>
+        <Link to={`/profile/${comp.id}`} className='linktext-decoration: none' style={{textDecoration: 'none', outline: '0' }}>
         <div className='grow dib'
             style={{
             textDecoration: 'none',
@@ -71,6 +74,8 @@ const Card = ({load, setLoad, item, setItem}) => {
         </Link>
         )
     })
+
+    
   
     const refresh = () =>{
         setLoad('false')
