@@ -12,7 +12,7 @@ const Card = ({load, setLoad}) => {
 
     useEffect(() => {
         if(load !== 'true'){
-        fetch(`https://randomuser.me/api/?results=200`)
+        fetch(`https://randomuser.me/api/?results=500`)
         .then(response => response.json())
         .then(json => {
             const tempItems = json.results.map(user => ({
@@ -31,16 +31,14 @@ const Card = ({load, setLoad}) => {
                 temp.id = i + 1;
               })
 
-            const filteredItems = tempItems.filter( member => 
-                {   do {
+            const filteredItems = tempItems.filter((member) => 
                     (member.timezone == '-1:00' || member.timezone == '0:00' || member.timezone == '+1:00') 
-                }while(filteredItems.length <=15)            
-            })
+                                
+                )
             
-            // setUsers([...users, ...tempItems]);
+            filteredItems.length = 15;
+            
             setItems([...items,...filteredItems]);
-
-            //setUsers([...users, ...filteredItems])
             setLoad('true')
             console.log('1', users)
         })
@@ -91,7 +89,7 @@ const Card = ({load, setLoad}) => {
                 {componentRender}
             </div>
             :
-            <div>14</div>
+            <h1>Loading</h1>
             }
             <button onClick={refresh}>Refresh</button>
         </div>
