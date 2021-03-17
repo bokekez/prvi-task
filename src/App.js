@@ -12,13 +12,13 @@ function App() {
   const [profileId, setProfileId] = useState(0);
 
   return (
+    <Router>
     <div>
     <div  style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 0}}>
       <Logo />
     </div>
     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
       <ItemContext.Provider value={{items, setItems, profileId, setProfileId}}>
-      <Router>
         <Redirect from="/prvi-task" exact to="/" />
         <Redirect from="/home" exact to="/" />
         <Route exact={true} path="/" render={() =>(
@@ -27,10 +27,10 @@ function App() {
         <Route exact={true} path="/Profile/:id" render={() => (
           <Profile/>
         )}/>
-      </Router> 
       </ItemContext.Provider>
     </div>
     </div>
+    </Router>
   );
 }
 
