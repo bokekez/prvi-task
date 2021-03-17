@@ -20,27 +20,34 @@ const Card = ({load, setLoad, item, setItem}) => {
                 'last': user.name.last, 
                 'birtd': user.dob.date,
                 'city': user.location.city,
+                'timezone': user.location.timezone.offset,    
                 'email': user.email,
                 'number': user.cell,
-                'timezone': user.timezone.offset          
+                      
             }))
             tempItems.forEach((temp, i) => {
                 temp.id = i + 1;
               })
-        .then(tempItems.find((member) => {if(member.timezone === '-1:00'))){
-            setUsers([...users, ...tempItems]);
+            .then(tempItems =>{
+                const filteredItems = tempItems.filter(member => (member.timezone === '-1:00' || member.timezone === '0:00' || member.timezone === '+1:00')({
+                
+            }))
+            })    
+            // setUsers([...users, ...tempItems]);
+            setUsers([...users, ...filteredItems])
             setLoad('true')
             console.log('1', users)
-        }
+        // }
+        // }
         })
         }
     }, [load])
 
-
+    console.log('1', users)
 
     const componentRender = users.map(comp => {
         return (
-        <Link to={`/profile/${comp.id}`} className='linktext-decoration: none' style={{textDecoration: 'none', outline: '0' }}>
+        <Link to={`/profile/${comp.id}`}  className='linktext-decoration: none' style={{textDecoration: 'none', outline: '0' }}>
         <div className='grow dib'
             style={{
             textDecoration: 'none',
