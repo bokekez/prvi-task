@@ -12,8 +12,11 @@ function App() {
   const [profileId, setProfileId] = useState(0);
 
   return (
+    <div>
+    <div  style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 0}}>
+      <Logo />
+    </div>
     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
-      <Logo/>
       <ItemContext.Provider value={{items, setItems, profileId, setProfileId}}>
       <Router>
         <Route exact={true} path="/prvi-task" render={() =>(
@@ -24,6 +27,7 @@ function App() {
         )}/>
       </Router> 
       </ItemContext.Provider>
+    </div>
     </div>
   );
 }

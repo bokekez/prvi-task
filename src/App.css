@@ -2,6 +2,26 @@
   text-align: center;
 }
 
+.navbar{
+  position: fixed;
+  margin-bottom: 1px;
+  top: 0;
+  overflow: visible;
+  z-index: 9999;
+  background: rgb(236, 236, 236);
+  width: 100%;
+  text-align: center;
+  border-bottom: gray 1px solid;
+}
+
+/* .navdiv{
+  overflow: visible;
+  z-index: 9999;
+  background: rgb(236, 236, 236);
+  width: 100%;
+  position: fixed;
+} */
+
 .App-link {
   color: #61dafb;
 }

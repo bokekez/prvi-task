@@ -67,7 +67,7 @@ const Card = ({load, setLoad}) => {
             alignContent: 'center', 
             textAlign: 'center', 
             marginTop: '1rem',
-            marginLeft: '1rem',
+            marginLeft: '0.5rem',
             marginRight: '0.5rem',
             borderRadius: '20px',
             transition: '0.5s'
@@ -91,7 +91,7 @@ const Card = ({load, setLoad}) => {
     }
 
     return (
-        <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
+        <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column', marginTop: '8rem'}}>
             { load === 'true' ?
             <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
                 {componentRender}
