@@ -21,6 +21,7 @@ function App() {
       <ItemContext.Provider value={{items, setItems, profileId, setProfileId}}>
         <Redirect from="/prvi-task" exact to="/" />
         <Redirect from="/home" exact to="/" />
+        <Redirect from="/" exact to="/" />
         <Route exact={true} path="/" render={() =>(
           <Card load={load} setLoad={setLoad}/>
         )}/>
