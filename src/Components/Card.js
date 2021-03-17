@@ -2,12 +2,15 @@ import React, {useState, useEffect} from 'react';
 import Component from './Component';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-const Card = () => {
-    const [item, setItem] = useState([]);
+const Card = ({load, setLoad, item, setItem}) => {
+    
     const [users, setUsers] = useState([]);
+    
+    console.log(load)
 
     useEffect(() => {
-        fetch(`https://randomuser.me/api/?results=15`)
+        if(load !== 'true'){
+        fetch(`https://randomuser.me/api/?results=200`)
         .then(response => response.json())
         .then(json => {
             const tempItems = json.results.map(user => ({
@@ -18,19 +21,26 @@ const Card = () => {
                 'birtd': user.dob.date,
                 'city': user.location.city,
                 'email': user.email,
-                'number': user.cell          
+                'number': user.cell,
+                'timezone': user.timezone.offset          
             }))
             tempItems.forEach((temp, i) => {
                 temp.id = i + 1;
               })
-            setUsers([...users, ...tempItems])
+        .then(tempItems.find((member) => {if(member.timezone === '-1:00'))){
+            setUsers([...users, ...tempItems]);
+            setLoad('true')
             console.log('1', users)
+        }
         })
-    }, [])
+        }
+    }, [load])
 
-    const tempItems = users.map(comp => {
+
+
+    const componentRender = users.map(comp => {
         return (
-        <Link to={`/profile/${comp.id}`} style={{textDecoration: 'none', outline: '0' }}>
+        <Link to={`/profile/${comp.id}`} className='linktext-decoration: none' style={{textDecoration: 'none', outline: '0' }}>
         <div className='grow dib'
             style={{
             textDecoration: 'none',
@@ -53,12 +63,21 @@ const Card = () => {
         </Link>
         )
     })
-
-    console.log(users)
+  
+    const refresh = () =>{
+        setLoad('false')
+    }
 
     return (
-        <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
-            {tempItems}
+        <div>
+            { load === 'true' ?
+            <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+                {componentRender}
+                <button onClick={refresh}>Refresh</button>
+            </div>
+            :
+            <div>14</div>
+            }
         </div>
     )
 }
