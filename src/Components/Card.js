@@ -12,7 +12,7 @@ const Card = ({load, setLoad}) => {
 
     useEffect(() => {
         if(load !== 'true'){
-        fetch(`https://randomuser.me/api/?results=15`)
+        fetch(`https://randomuser.me/api/?results=200`)
         .then(response => response.json())
         .then(json => {
             const tempItems = json.results.map(user => ({
@@ -30,14 +30,12 @@ const Card = ({load, setLoad}) => {
             tempItems.forEach((temp, i) => {
                 temp.id = i + 1;
               })
-            // .then(tempItems =>{
-            //     const filteredItems = tempItems.filter(member => (member.timezone === '-1:00' || member.timezone === '0:00' || member.timezone === '+1:00')({
-                
-            // }))
-            // })
-            const filteredItems = tempItems.filter(member => (member.timezone == '-1:00' || member.timezone == '0:00' || member.timezone == '+1:00')(
-                
-            ))
+
+            const filteredItems = tempItems.filter( member => 
+                {   do {
+                    (member.timezone == '-1:00' || member.timezone == '0:00' || member.timezone == '+1:00') 
+                }while(filteredItems.length <=15)            
+            })
             
             // setUsers([...users, ...tempItems]);
             setItems([...items,...filteredItems]);
@@ -52,7 +50,7 @@ const Card = ({load, setLoad}) => {
     
     const componentRender = items.map(comp => {
         return (
-        <Link to={`/profile/${comp.id}`} className='linktext-decoration: none' style={{textDecoration: 'none', outline: '0' }}>
+        <Link to={`/profile/${comp.id}`} className='linktext-decoration: none' style={{color:'black' ,textDecoration: 'none', outline: '0' }}>
         <div className='grow dib'
             onClick={() => idPass(comp.id)}
             style={{
