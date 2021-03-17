@@ -22,19 +22,25 @@ return (
         </Link>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <img style={{marginTop: '0.4rem', borderRadius: '40px', width: '20rem', height: '20rem'}}src={userProfile[0].picture.large}/>
-                <h3 style={{height: '0.5rem', fontSize: '0.7rem'}}>{userProfile[0].title}</h3>
-                <label><img style={{height: '1rem', fontSize: '1rem'}} src={First}></img></label>
-                <h2 style={{height: '0.5rem', fontSize: '1.2rem'}}>{userProfile[0].first}</h2>
-                <label><img style={{height: '1rem', fontSize: '1rem'}} src={Last}></img></label>
-                <h2 style={{height: '0.5rem', fontSize: '1.2rem'}}>{userProfile[0].last}</h2>
-                <label><img style={{height: '1rem', fontSize: '1rem'}} src={Cake}></img></label>
-                <h2 style={{height: '0.5rem', fontSize: '1.2rem'}}>{userProfile[0].birth}</h2>
-                <label><img style={{height: '1rem', fontSize: '1rem'}} src={City}></img></label>
-                <h2 style={{height: '0.5rem', fontSize: '1.2rem'}}>{userProfile[0].city}</h2>
-                <label><img style={{height: '1rem', fontSize: '1rem'}} src={Mail}></img></label>
-                <h2 style={{height: '0.5rem', fontSize: '1.2rem'}}>{userProfile[0].email}</h2>
-                <label><img style={{height: '1rem', fontSize: '1rem'}} src={Phone}></img></label>
-                <h2 style={{height: '0.5rem', fontSize: '1.2rem'}}>{userProfile[0].number}</h2>
+                <h3 style={{height: '0.5rem', fontSize: '0.7rem', marginBottom: -3}}>{userProfile[0].title}</h3>
+                <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
+                    <img style={{height: '1rem', fontSize: '1rem'}} src={First}></img> : {userProfile[0].first}
+                </h2>
+                <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
+                    <img style={{height: '1rem', fontSize: '1rem'}} src={Last}></img> : {userProfile[0].last}
+                </h2>
+                <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
+                    <img style={{height: '1rem', fontSize: '1rem'}} src={Cake}></img> : {userProfile[0].birth}
+                </h2>
+                <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
+                    <img style={{height: '1rem', fontSize: '1rem'}} src={City}></img> : {userProfile[0].city}
+                </h2>
+                <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
+                    <img style={{height: '1rem', fontSize: '1rem'}} src={Mail}></img> : {userProfile[0].email}
+                </h2>
+                <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
+                    <img style={{height: '1rem', fontSize: '1rem'}} src={Phone}></img> : {userProfile[0].number}
+                </h2>
             </div>
         </div>
     )
