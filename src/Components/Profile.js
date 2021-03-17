@@ -15,7 +15,7 @@ const Profile = ({match}) => {
     console.log('profil', profileId);
 
 return (
-        <div style={{marginTop: '14rem'}}>
+        <div style={{marginTop: '6rem'}}>
         <Link to={`/prvi-task`} style={{ textDecoration: 'none', outline: '0' }}>
              <button style={{color: 'transparent'}}><img src={Arrow} style={{height: '2rem', width: '2rem'}}/></button>
         </Link>
