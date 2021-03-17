@@ -21,7 +21,7 @@ const Card = ({load, setLoad}) => {
                 'title': user.name.title,
                 'first': user.name.first,
                 'last': user.name.last, 
-                'birth': user.dob.date,
+                'age': user.dob.age,
                 'city': user.location.city,
                 'timezone': user.location.timezone.offset,    
                 'email': user.email,
@@ -31,12 +31,10 @@ const Card = ({load, setLoad}) => {
             tempItems.forEach((temp, i) => {
                 temp.id = i + 1;
               })
-            // tempItems.forEach((temp, i) => {
-            //     temp.formatedDate=temp.dob.date.toLocaleDateString();
-            // })
+            
 
             const filteredItems = tempItems.filter((member) => 
-                    (member.timezone == '-1:00' || member.timezone == '0:00' || member.timezone == '+1:00') 
+                    (member.timezone == '-1:00' || member.timezone == '0:00' || member.timezone == '+1:00' || member.age > '18') 
                                 
                 )
 

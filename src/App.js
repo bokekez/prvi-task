@@ -19,11 +19,9 @@ function App() {
     </div>
     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
       <ItemContext.Provider value={{items, setItems, profileId, setProfileId}}>
-        <switch>
-          <Redirect from="/prvi-task" exact to="/" />
-          <Redirect from="/home" exact to="/" />
-          <Redirect from="/" exact to="/" />
-        </switch>
+        <Redirect from="/prvi-task" exact to="/" />
+        <Redirect from="/home" exact to="/" />
+        <Redirect from="/" exact to="/" />
         <Route exact={true} path="/" render={() =>(
           <Card load={load} setLoad={setLoad}/>
         )}/>
