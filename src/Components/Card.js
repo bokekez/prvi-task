@@ -63,7 +63,7 @@ const Card = ({load, setLoad}) => {
             textDecoration: 'none',
             width: '22rem', 
             height: '16rem', 
-            background: '#E0E0E0',
+            background: '#d9d9d9',
             alignContent: 'center', 
             textAlign: 'center', 
             marginTop: '1rem',
