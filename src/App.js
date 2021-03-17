@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import './App.css';
 import Card from './Components/Card';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import Logo from './Components/Logo';
 import Profile from './Components/Profile';
 import { ItemContext } from './Components/Context';
@@ -19,7 +19,8 @@ function App() {
     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
       <ItemContext.Provider value={{items, setItems, profileId, setProfileId}}>
       <Router>
-        <Route exact={true} path="/prvi-task" render={() =>(
+        <Redirect from="/prvi-task" exact to="/" />
+        <Route exact={true} path="/" render={() =>(
           <Card load={load} setLoad={setLoad}/>
         )}/>
         <Route exact={true} path="/Profile/:id" render={() => (
