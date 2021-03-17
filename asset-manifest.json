@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/prvi-task/static/css/main.17e00269.chunk.css",
-    "main.js": "/prvi-task/static/js/main.c1d2c0cd.chunk.js",
-    "main.js.map": "/prvi-task/static/js/main.c1d2c0cd.chunk.js.map",
+    "main.js": "/prvi-task/static/js/main.0860c601.chunk.js",
+    "main.js.map": "/prvi-task/static/js/main.0860c601.chunk.js.map",
     "runtime-main.js": "/prvi-task/static/js/runtime-main.6bf5efc6.js",
     "runtime-main.js.map": "/prvi-task/static/js/runtime-main.6bf5efc6.js.map",
     "static/css/2.fe359a49.chunk.css": "/prvi-task/static/css/2.fe359a49.chunk.css",
-    "static/js/2.25bc6321.chunk.js": "/prvi-task/static/js/2.25bc6321.chunk.js",
-    "static/js/2.25bc6321.chunk.js.map": "/prvi-task/static/js/2.25bc6321.chunk.js.map",
+    "static/js/2.be5a7a0b.chunk.js": "/prvi-task/static/js/2.be5a7a0b.chunk.js",
+    "static/js/2.be5a7a0b.chunk.js.map": "/prvi-task/static/js/2.be5a7a0b.chunk.js.map",
     "static/js/3.780b62ee.chunk.js": "/prvi-task/static/js/3.780b62ee.chunk.js",
     "static/js/3.780b62ee.chunk.js.map": "/prvi-task/static/js/3.780b62ee.chunk.js.map",
     "index.html": "/prvi-task/index.html",
     "static/css/2.fe359a49.chunk.css.map": "/prvi-task/static/css/2.fe359a49.chunk.css.map",
     "static/css/main.17e00269.chunk.css.map": "/prvi-task/static/css/main.17e00269.chunk.css.map",
-    "static/js/2.25bc6321.chunk.js.LICENSE.txt": "/prvi-task/static/js/2.25bc6321.chunk.js.LICENSE.txt"
+    "static/js/2.be5a7a0b.chunk.js.LICENSE.txt": "/prvi-task/static/js/2.be5a7a0b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6bf5efc6.js",
     "static/css/2.fe359a49.chunk.css",
-    "static/js/2.25bc6321.chunk.js",
+    "static/js/2.be5a7a0b.chunk.js",
     "static/css/main.17e00269.chunk.css",
-    "static/js/main.c1d2c0cd.chunk.js"
+    "static/js/main.0860c601.chunk.js"
   ]
 }
