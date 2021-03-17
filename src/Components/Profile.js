@@ -22,7 +22,7 @@ return (
         </Link>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <img style={{marginTop: '0.4rem', borderRadius: '40px', width: '20rem', height: '20rem'}}src={userProfile[0].picture.large}/>
-                <h3 style={{height: '0.5rem', fontSize: '0.7rem', marginBottom: -3}}>{userProfile[0].title}</h3>
+                <h3 style={{height: '0.5rem', fontSize: '0.7rem', marginBottom: -10}}>{userProfile[0].title}</h3>
                 <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
                     <img style={{height: '1rem', fontSize: '1rem'}} src={First}></img> : {userProfile[0].first}
                 </h2>

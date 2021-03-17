@@ -61,7 +61,7 @@ const Card = ({load, setLoad}) => {
             onClick={() => idPass(comp.id)}
             style={{
             textDecoration: 'none',
-            width: '22rem', 
+            width: '22.7rem', 
             height: '16rem', 
             background: '#d9d9d9',
             alignContent: 'center', 
