@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/prvi-task/static/css/main.49ba5a70.chunk.css",
-    "main.js": "/prvi-task/static/js/main.b4a3ac27.chunk.js",
-    "main.js.map": "/prvi-task/static/js/main.b4a3ac27.chunk.js.map",
+    "main.js": "/prvi-task/static/js/main.dc5b1e10.chunk.js",
+    "main.js.map": "/prvi-task/static/js/main.dc5b1e10.chunk.js.map",
     "runtime-main.js": "/prvi-task/static/js/runtime-main.6bf5efc6.js",
     "runtime-main.js.map": "/prvi-task/static/js/runtime-main.6bf5efc6.js.map",
     "static/css/2.fe359a49.chunk.css": "/prvi-task/static/css/2.fe359a49.chunk.css",
@@ -13,13 +13,15 @@
     "index.html": "/prvi-task/index.html",
     "static/css/2.fe359a49.chunk.css.map": "/prvi-task/static/css/2.fe359a49.chunk.css.map",
     "static/css/main.49ba5a70.chunk.css.map": "/prvi-task/static/css/main.49ba5a70.chunk.css.map",
-    "static/js/2.4d0ce3b4.chunk.js.LICENSE.txt": "/prvi-task/static/js/2.4d0ce3b4.chunk.js.LICENSE.txt"
+    "static/js/2.4d0ce3b4.chunk.js.LICENSE.txt": "/prvi-task/static/js/2.4d0ce3b4.chunk.js.LICENSE.txt",
+    "static/media/cake.3ea8b8d1.png": "/prvi-task/static/media/cake.3ea8b8d1.png",
+    "static/media/mail.2c378c9e.png": "/prvi-task/static/media/mail.2c378c9e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6bf5efc6.js",
     "static/css/2.fe359a49.chunk.css",
     "static/js/2.4d0ce3b4.chunk.js",
     "static/css/main.49ba5a70.chunk.css",
-    "static/js/main.b4a3ac27.chunk.js"
+    "static/js/main.dc5b1e10.chunk.js"
   ]
 }
