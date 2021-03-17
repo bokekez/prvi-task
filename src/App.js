@@ -12,7 +12,7 @@ function App() {
   const [profileId, setProfileId] = useState(0);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
     <div>
     <div  style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 0}}>
       <Logo />
