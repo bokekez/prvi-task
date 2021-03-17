@@ -34,10 +34,13 @@ const Card = ({load, setLoad}) => {
             //     const filteredItems = tempItems.filter(member => (member.timezone === '-1:00' || member.timezone === '0:00' || member.timezone === '+1:00')({
                 
             // }))
-            // }) 
-
+            // })
+            const filteredItems = tempItems.filter(member => (member.timezone == '-1:00' || member.timezone == '0:00' || member.timezone == '+1:00')(
+                
+            ))
+            
             // setUsers([...users, ...tempItems]);
-            setItems([...items,...tempItems]);
+            setItems([...items,...filteredItems]);
 
             //setUsers([...users, ...filteredItems])
             setLoad('true')
