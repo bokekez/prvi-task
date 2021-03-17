@@ -20,7 +20,7 @@ return (
              <button style={{color: 'transparent'}}><img src={Arrow} style={{height: '2rem', width: '2rem'}}/></button>
         </Link>
             <div>
-                <img style={{marginTop: '0.4rem', borderRadius: '40px', width: '15rem', height: '15rem'}}src={userProfile[0].picture.large}/>
+                <img style={{marginTop: '0.4rem', borderRadius: '40px', width: '20rem', height: '20rem'}}src={userProfile[0].picture.large}/>
                 <h3 style={{height: '0.5rem', fontSize: '0.7rem'}}>{userProfile[0].title}</h3>
                 <h2 style={{height: '0.5rem', fontSize: '1.2rem'}}>{userProfile[0].first}</h2>
                 <h2 style={{height: '0.5rem', fontSize: '1.2rem'}}>{userProfile[0].last}</h2>

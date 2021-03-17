@@ -11,8 +11,8 @@ const Card = ({load, setLoad}) => {
     console.log(load)
 
     useEffect(() => {
-        if(load !== 'true'){
-        fetch(`https://randomuser.me/api/?results=500`)
+        if(load === 'false'){
+        fetch(`https://randomuser.me/api/?results=1000`)
         .then(response => response.json())
         .then(json => {
             const tempItems = json.results.map(user => ({
@@ -30,13 +30,20 @@ const Card = ({load, setLoad}) => {
             tempItems.forEach((temp, i) => {
                 temp.id = i + 1;
               })
+            // tempItems.forEach((temp, i) => {
+            //     temp.formatedDate=temp.dob.date.toLocaleDateString();
+            // })
 
             const filteredItems = tempItems.filter((member) => 
                     (member.timezone == '-1:00' || member.timezone == '0:00' || member.timezone == '+1:00') 
                                 
                 )
-            
+
             filteredItems.length = 15;
+
+            // if(filteredItems.length < 15){
+            //     setRefetch(true);
+            // }
             
             setItems([...items,...filteredItems]);
             setLoad('true')
@@ -53,18 +60,18 @@ const Card = ({load, setLoad}) => {
             onClick={() => idPass(comp.id)}
             style={{
             textDecoration: 'none',
-            width: '14rem', 
-            height: '15rem', 
+            width: '20rem', 
+            height: '16rem', 
             background: '#E0E0E0',
             alignContent: 'center', 
             textAlign: 'center', 
-            marginTop: '0.7rem',
-            marginLeft: '0.5rem',
+            marginTop: '1rem',
+            marginLeft: '3rem',
             marginRight: '0.5rem',
             borderRadius: '20px',
             transition: '0.5s'
             }}>
-            <img style={{marginTop: '0.4rem', borderRadius: '40px'}}src={comp.picture.large}/>
+            <img style={{marginTop: '0.4rem', borderRadius: '40px', height: '10rem'}}src={comp.picture.large}/>
             <h3 style={{height: '0.5rem', fontSize: '0.7rem'}}>{comp.title}</h3>
             <h2 style={{height: '0.5rem', fontSize: '1.2rem'}}>{comp.first}</h2>
             <h2 style={{height: '0.5rem', fontSize: '1.2rem'}}>{comp.last}</h2>
