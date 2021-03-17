@@ -57,7 +57,7 @@ const Card = ({load, setLoad}) => {
     const componentRender = items.map(comp => {
         return (
         <Link to={`/profile/${comp.id}`} className='linktext-decoration: none' style={{color:'black' ,textDecoration: 'none', outline: '0' }}>
-        <div className='grow dib'
+        <div className='grow dib shadow-5'
             onClick={() => idPass(comp.id)}
             style={{
             textDecoration: 'none',
@@ -91,7 +91,7 @@ const Card = ({load, setLoad}) => {
     }
 
     return (
-        <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column', marginTop: '8rem'}}>
+        <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column', marginTop: '6rem'}}>
             { load === 'true' ?
             <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
                 {componentRender}

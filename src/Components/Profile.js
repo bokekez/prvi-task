@@ -6,18 +6,12 @@ import Arrow from './Arrow.png';
 
 const Profile = ({match}) => {
     const {items, setItems, profileId, setProfileId} = useContext(ItemContext);
-    const userProfile = items.filter(item => (item.id === profileId)
-        
-    )
-
-
-    console.log('profil', userProfile);
-    console.log('profil', profileId);
+    const userProfile = items.filter(item => (item.id === profileId))
 
 return (
-        <div style={{marginTop: '6rem'}}>
+        <div style={{marginTop: '7rem'}}>
         <Link to={`/prvi-task`} style={{ textDecoration: 'none', outline: '0' }}>
-             <button style={{color: 'transparent'}}><img src={Arrow} style={{height: '2rem', width: '2rem'}}/></button>
+             <button className='grow'style={{outline: 'none', backgroundColor: 'transparent', border: 'none'}}><img src={Arrow} style={{height: '2rem', width: '2rem'}}/></button>
         </Link>
             <div>
                 <img style={{marginTop: '0.4rem', borderRadius: '40px', width: '20rem', height: '20rem'}}src={userProfile[0].picture.large}/>
