@@ -21,7 +21,7 @@ function App() {
       <Router>
         <Redirect from="/prvi-task" exact to="/" />
         <Redirect from="/home" exact to="/" />
-        <Redirect from="" exact to="/" />
+        <Redirect from="https://bokekez.github.io" exact to="/" />
         <Route exact={true} path="/" render={() =>(
           <Card load={load} setLoad={setLoad}/>
         )}/>
