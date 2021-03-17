@@ -34,7 +34,7 @@ const Card = ({load, setLoad}) => {
             
 
             const filteredItems = tempItems.filter((member) => 
-                    (member.timezone == '-1:00' || member.timezone == '0:00' || member.timezone == '+1:00' || member.age > '18') 
+                    (member.timezone == '-1:00' || member.timezone == '0:00' || member.timezone == '+1:00' && member.age > '18') 
                                 
                 )
 
