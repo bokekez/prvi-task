@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import './App.css';
 import Card from './Components/Card';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect, HashRouter } from "react-router-dom";
 import Logo from './Components/Logo';
 import Profile from './Components/Profile';
 import { ItemContext } from './Components/Context';
