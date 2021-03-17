@@ -8,6 +8,7 @@ import Profile from './Components/Profile';
 function App() {
   
   return (
+    <Router>
     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
       <Logo/>
       <Router>
@@ -19,6 +20,7 @@ function App() {
         )}/>
       </Router>
     </div>
+    </Router>
   );
 }
 

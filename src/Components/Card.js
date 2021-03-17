@@ -30,7 +30,7 @@ const Card = () => {
 
     const tempItems = users.map(comp => {
         return (
-        <Link to={`/profile/${comp.id}`} style={{ textDecoration: 'none' }}>
+        <Link to={`/profile/${comp.id}`} style={{textDecoration: 'none'}}>
         <div className='grow dib'
             style={{
             textDecoration: 'none',
