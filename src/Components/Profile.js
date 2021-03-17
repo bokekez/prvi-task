@@ -10,7 +10,7 @@ const Profile = ({match}, users) => {
 
     return (
         <div>
-        <Link to={`/`} style={{ textDecoration: 'none' }}>
+        <Link to={`/prvi-task`} style={{ textDecoration: 'none', outline: '0' }}>
              <button >This is the way</button>
         </Link>
              <h1>123</h1>

@@ -30,7 +30,7 @@ const Card = () => {
 
     const tempItems = users.map(comp => {
         return (
-        <Link to={`/profile/${comp.id}`} style={{textDecoration: 'none'}}>
+        <Link to={`/profile/${comp.id}`} style={{textDecoration: 'none', outline: '0' }}>
         <div className='grow dib'
             style={{
             textDecoration: 'none',
@@ -55,7 +55,6 @@ const Card = () => {
     })
 
     console.log(users)
-    console.log(item)
 
     return (
         <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>

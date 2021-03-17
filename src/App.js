@@ -8,11 +8,10 @@ import Profile from './Components/Profile';
 function App() {
   
   return (
-    <Router>
     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
       <Logo/>
       <Router>
-        <Route exact={true} path="/" render={() =>(
+        <Route exact={true} path="/prvi-task" render={() =>(
           <Card/>
         )}/>
         <Route exact={true} path="/Profile/:id" render={() => (
@@ -20,7 +19,6 @@ function App() {
         )}/>
       </Router>
     </div>
-    </Router>
   );
 }
 
