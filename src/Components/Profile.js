@@ -15,7 +15,7 @@ const Profile = ({match}) => {
     const {items, setItems, profileId, setProfileId} = useContext(ItemContext);
     const userProfile = items.filter(item => (item.id === profileId))
 return (
-        <div style={{marginTop: '7rem'}}>
+        <div style={{marginTop: '7rem', maxWidth: '90vw'}}>
         <Link to={`/`} style={{ textDecoration: 'none', outline: '0' }}>
              <button className='grow'style={{outline: 'none', backgroundColor: 'transparent', border: 'none'}}><img src={Arrow} style={{height: '2rem', width: '2rem'}}/></button>
         </Link>
