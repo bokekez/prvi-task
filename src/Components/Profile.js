@@ -19,7 +19,7 @@ return (
         <Link to={`/`} style={{ textDecoration: 'none', outline: '0' }}>
              <button className='grow'style={{outline: 'none', backgroundColor: 'transparent', border: 'none'}}><img src={Arrow} style={{height: '2rem', width: '2rem'}}/></button>
         </Link>
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}>
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', maxWidth: '90vw'}}>
                 <img style={{marginTop: '0.4rem', borderRadius: '40px', width: '20rem', height: '20rem'}}src={userProfile[0].picture.large}/>
                 <h3 style={{height: '0.5rem', fontSize: '0.7rem', marginBottom: -10, marginLeft: '1.2rem'}}>{userProfile[0].title}</h3>
                 <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
@@ -35,11 +35,11 @@ return (
                     <img style={{height: '1rem', fontSize: '1rem'}} src={City}></img> {userProfile[0].city}
                 </h2>
                 <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
-                    <img style={{height: '1rem', fontSize: '1rem'}} src={Mail}></img> {userProfile[0].email}
-                </h2>
-                <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
                     <img style={{height: '1rem', fontSize: '1rem'}} src={Phone}></img> {userProfile[0].number}
                 </h2>
+                <h2 style={{marginTop: '1rem' ,height: '0.5rem', fontSize: '1.2rem', marginBottom: 0, fontSize: '100%'}}>
+                    <img style={{height: '1rem', fontSize: '1rem'}} src={Mail}></img> {userProfile[0].email}
+                </h2>     
             </div>
         </div>
     )
