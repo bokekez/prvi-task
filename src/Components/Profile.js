@@ -34,7 +34,7 @@ return (
                 <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
                     <img style={{height: '1rem', fontSize: '1rem'}} src={City}></img> {userProfile[0].city}
                 </h2>
-                <h2 style={{height: '0.5rem', fontSize: '1.2rem', marginBottom: 0}}>
+                <h2 style={{marginTop: '1rem', height: '0.5rem', fontSize: '1.2rem', marginBottom: 0, fontSize: '100%'}}>
                     <img style={{height: '1rem', fontSize: '1rem'}} src={Phone}></img> {userProfile[0].number}
                 </h2>
                 <h2 style={{marginTop: '1rem' ,height: '0.5rem', fontSize: '1.2rem', marginBottom: 0, fontSize: '100%'}}>
