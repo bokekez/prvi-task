@@ -8,8 +8,6 @@ const Card = ({load, setLoad}) => {
     
     const [users, setUsers] = useState([]);
     const {items, setItems, profileId, setProfileId} = useContext(ItemContext);
-    
-    console.log(load)
 
     useEffect(() => {
         if(load === 'false'){
@@ -31,10 +29,8 @@ const Card = ({load, setLoad}) => {
             }))
             tempItems.forEach((temp, i) => {
                 temp.id = i + 1;
-              })
-            tempItems.forEach((temp, i) => {
                 temp.date = (new Date(temp.birthday).toLocaleDateString())
-            })
+              })
 
             const filteredItems = tempItems.filter((member) => 
                     (member.timezone == '-1:00' || member.timezone == '0:00' || member.timezone == '+1:00' && member.age > '18') 
@@ -43,18 +39,12 @@ const Card = ({load, setLoad}) => {
 
             filteredItems.length = 15;
 
-            // if(filteredItems.length < 15){
-            //     setRefetch(true);
-            // }
-            
             setItems([...items,...filteredItems]);
             setLoad('true')
             
         })
         }
     }, [load])
-
-    console.log('1', items)
 
     const componentRender = items.map(comp => {
         return (
@@ -64,6 +54,7 @@ const Card = ({load, setLoad}) => {
             style={{
             textDecoration: 'none',
             width: '22.7rem', 
+            maxWidth: '90vw',
             height: '16rem', 
             background: '#d9d9d9',
             alignContent: 'center', 
